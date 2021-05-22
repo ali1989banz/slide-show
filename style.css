@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00c3ff;
+}
+
+.slides{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 100px;
+}
+.slider{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+.slider input{
+    display: none;
+}
+
+.slideImg{
+    width: 20%;
+    transition: 2s;
+}
+.slideImg img{
+    width: 800px;
+    height: 500px;
+}
+
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+
+.automaticBut{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+.automaticBut div{
+    border: 2px solid #55d7ff;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+.automaticBut div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .automaticBut .auto-btn1{
+    background-color: #55d7ff;
+}
+#radio2:checked ~ .automaticBut .auto-btn2{
+    background-color: #55d7ff;
+}
+#radio3:checked ~ .automaticBut .auto-btn3{
+    background-color: #55d7ff;
+}
